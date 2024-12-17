@@ -27,7 +27,6 @@ def model(request):
     model.compile()
     return model
 
-
 @pytest.mark.parametrize('io_type', ['io_parallel', 'io_stream'])
 @pytest.mark.parametrize('backend', ['Vivado', 'Vitis', 'Quartus', 'Catapult'])
 @pytest.mark.parametrize('model', [True, False], indirect=True)

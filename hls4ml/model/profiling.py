@@ -168,7 +168,7 @@ def ap_fixed_WIFS(dtype):
     from hls4ml.backends import VivadoBackend
 
     dtype = VivadoBackend.convert_precision_string(dtype)
-    W, I, F, S = dtype.width, dtype.integer, dtype.fractional, dtype.signed
+    W, I, F, S = dtype.width, dtype.integer, getattr(dtype, 'fractional', 0), dtype.signed
     return W, I, F, S
 
 

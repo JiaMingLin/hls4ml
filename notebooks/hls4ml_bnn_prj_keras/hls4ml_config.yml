@@ -1,0 +1,18 @@
+Backend: Vitis
+ClockPeriod: 5
+HLSConfig:
+  Model:
+    BramFactor: 1000000000
+    Precision: fixed<16,6>
+    ReuseFactor: 1
+    Strategy: Latency
+    TraceOutput: false
+IOType: io_parallel
+InputData: null
+KerasModel: !keras_model 'hls4ml_bnn_prj_keras/keras_model.h5'
+OutputDir: hls4ml_bnn_prj_keras
+OutputPredictions: null
+Part: xcvu13p-flga2577-2-e
+ProjectName: myproject
+Stamp: F3AC1BdA
+Version: 1.0.0
