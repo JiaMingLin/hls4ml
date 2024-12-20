@@ -50,9 +50,7 @@ def parse_dense_layer(keras_layer, input_names, input_shapes, data_reader):
 
     return layer, output_shape
 
-
 activation_layers = ['Activation', 'LeakyReLU', 'ThresholdedReLU', 'ELU', 'PReLU', 'Softmax', 'ReLU']
-
 
 @keras_handler(*activation_layers)
 def parse_activation_layer(keras_layer, input_names, input_shapes, data_reader):

@@ -251,7 +251,9 @@ def parse_keras_model(model_arch, reader):
     output_shape = None
 
     print('Topology:')
+
     for keras_layer in layer_config:
+        # (jmlin) extract the input shape
         if 'batch_input_shape' in keras_layer['config']:
             if 'inbound_nodes' in keras_layer and len(keras_layer['inbound_nodes']) > 0:
                 input_shapes = [output_shapes[inbound_node[0]] for inbound_node in keras_layer['inbound_nodes'][0]]

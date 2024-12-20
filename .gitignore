@@ -14,3 +14,8 @@ docs/autodoc/*
 hls4mlprj_*
 *~
 *.ipynb_checkpoints/
+data/*
+data*
+*_prj
+notebooks*
+notebooks/*
